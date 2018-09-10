@@ -1,5 +1,7 @@
 <?php
 
+    
+
     // Executa Querys no Banco
 
     function DBExecute($query) {
