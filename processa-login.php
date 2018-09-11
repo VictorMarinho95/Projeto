@@ -4,9 +4,23 @@
     //require 'database.php';
     require 'index.php';
 
-    $testa = DBRead('usuarios');
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
 
-    var_dump($testa);
+    $data = DBRead('usuarios', "WHERE usuario_login ='".$login."'"); 
+    var_dump($data);
 
+    if($data[0]['usuario_login'] == $login && $data[0]["usuario_senha"] == $senha) {
+        
+        if($login == 'adm' && $senha == 'adm') {
+            header("Location: inicio-adm.php");
+        } else {
+            header("Location: inicio.php");
+        }
+        
+    } else {
+        echo "Usuário ou senha incorretos<br>";
+    }
+    
     
 ?>

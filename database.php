@@ -8,9 +8,10 @@
         $link = DBConnect();
         $result = @mysqli_query($link, $query) or die (mysqli_error($link));
         
-        return $result;
         
         DBClose($link);
+        
+        return $result;
     }
 
     // Grava Registros nas Tabelas
