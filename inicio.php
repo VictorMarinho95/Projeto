@@ -12,6 +12,7 @@
     <a href="fazer-pedido.php">Fazer pedido</a>
     <a href="acompanhar-pedido.php">Acompanhar Pedido</a>
     <a href="cancelar-pedido.php">Cancelar Pedido</a>
+    <a href="#">Editar Dados</a>
     
     
 </body>
